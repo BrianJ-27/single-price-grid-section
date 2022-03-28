@@ -1,0 +1,20 @@
+// **************************************
+// FORM STYLES
+// **************************************
+@use "../utilities" as *;
+
+/*------FLEXBOX LAYOUT STYLES-----------*/
+
+.flex__container {
+  @include flex_me(
+    $dir: column,
+    $wrap: wrap,
+    $just: center,
+    $vertAlign: center
+  );
+  &--flex-end {
+    @extend .flex__container;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}

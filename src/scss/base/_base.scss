@@ -1,0 +1,37 @@
+// **************************************
+// BASE STYLES
+// **************************************
+
+@use "../utilities" as *;
+
+/*-----BASE GLOBAL STYLES------*/
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: px-to-rems(16px);
+}
+
+html,
+body {
+  @extend %body-properties;
+  background-color: $color-bg;
+  line-height: 1.5;
+}
+
+main {
+  margin: 4rem 0;
+}
+
+ul {
+  margin-top: px-to-rems(10px);
+}
+
+p {
+  @extend %text-modules;
+}
+
+a {
+  @extend %link-properties;
+}

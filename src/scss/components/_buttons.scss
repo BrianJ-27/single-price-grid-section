@@ -1,0 +1,17 @@
+// **************************************
+// BUTTON STYLES
+// **************************************
+@use "../utilities" as *;
+
+//button styles
+.btn {
+  display: inline-block;
+  @extend %btn-properties;
+  margin-top: px-to-rems(20px);
+  &__overlay--full {
+    background-color: $color-accent;
+    color: $color-text-light;
+    padding: px-to-rems(10px);
+    width: 100%;
+  }
+}

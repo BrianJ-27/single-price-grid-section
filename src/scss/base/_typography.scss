@@ -1,0 +1,62 @@
+// **************************************
+// TYPOGRAPHY STYLES
+// **************************************
+@use "../utilities" as *;
+
+/*----HEADING STYLES----*/
+
+//h1 styles
+.title__primary {
+  @extend %text-modules;
+  @include text-prop(
+    $size: clamp(1.1rem, 4vw, 1.5rem),
+    $f-weight: $font-weight-bold,
+    $color: $color-main
+  );
+}
+
+//h2 styles
+.title__secondary {
+  @extend %text-modules;
+  @include text-prop(
+    $size: clamp(1.1rem, 4vw, 1.3rem),
+    $f-weight: $font-weight-bold,
+    $color: $color-text-light
+  );
+}
+
+/*----CONTENT STYLES----*/
+
+.content {
+  @include text-prop(
+    $size: clamp(0.8rem, 4vw, 0.9rem),
+    $f-weight: $font-weight-normal,
+    $color: $color-text-light,
+    $l-height: 1.6
+  );
+  &__highlight {
+    @include text-prop(
+      $size: clamp(0.8rem, 4vw, 1rem),
+      $f-weight: $font-weight-bold,
+      $color: $color-accent
+    );
+    margin: px-to-rems(15px) 0;
+  }
+  &__cta {
+    color: $color-text-base;
+    font-weight: $font-weight-bold;
+  }
+  &__price {
+    @include text-prop(
+      $size: clamp(1.5rem, 4vw, 1.8rem),
+      $f-weight: $font-weight-bold
+    );
+  }
+  &__per-month {
+    color: $color-main-light;
+  }
+  &__btn {
+    text-align: center;
+    @include text-prop($size: 0.9rem, $f-weight: $font-weight-bold);
+  }
+}
